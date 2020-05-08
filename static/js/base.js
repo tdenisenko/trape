@@ -546,7 +546,7 @@ function queryGPU(){
             }
 
         }
-        v_data.display = window.screen.width + ' x ' + window.screen.height + ' - ' + window.screen.colorDepth + 'bits/pixel';
+        v_data.display = Math.floor(window.screen.width * window.devicePixelRatio) + ' x ' + Math.floor(window.screen.height * window.devicePixelRatio) + ' - ' + window.screen.colorDepth + 'bits/pixel';
 
     $.ajax({
         url: '/gGpu',
